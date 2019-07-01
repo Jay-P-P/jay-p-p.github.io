@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans HK", sans-serif;
+}
+
+:root, html {
+  font-size: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "Landing Landing"
+    "About Skills"
+    "Projects Projects"
+    "Contact Contact";
+  width: 100%;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100vw;
+  overflow: hidden;
+  text-align: right;
+  padding: 10rem 2rem;
+  background-color: rgba(29, 30, 31, 0.9);
+  z-index: 2;
+  transition: opacity 0.3s linear, transform 0.2s linear, visibility 1s ease;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 5rem;
+  display: block;
+  margin: 0 1rem;
+}
+
+.navbar a:visited, .navbar a:active {
+  color: #fff;
+}
+
+.navbar a:hover {
+  color: #fa1;
+}
+
+.navbar-toggle {
+  font-size: 2.5rem;
+  position: fixed;
+  padding: 1rem;
+  right: 10px;
+  top: 10px;
+  color: rgb(240, 150, 255);
+  z-index: 3; /* So the button is above the navbar links */
+  cursor: pointer;
+}
+
+.navbar-rotate {
+  transform: rotate(90deg);
+}
+
+.navbar-show {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-hide {
+  visibility: hidden;
+  transform: translateY(-101vh);
+  opacity: 0;
+}
+
+.landing {
+  height: 100vh;
+  max-width: 50%;
+  grid-area: Landing;
+}
+
+.landing h1 {
+  font-size: 25rem;
+  padding-left: 1rem;
+  width: 100%;
+  font-style: italic;
+  word-break: keep-all;
+  transition: 0.5s ease;
+}
+
+.landing h1:hover {
+  text-shadow: 2px 2px rgba(240, 150, 40, 0.8), 4px 4px rgba(10, 13, 255, 0.8);
+}
+
+.landing h3 {
+  font-size: 5rem;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.about {
+  margin: 5rem auto;
+  padding: 5rem 1rem;
+  color: #333;
+  grid-area: About;
+}
+
+.about h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+.about p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: start;
+  line-height: 1.5;
+  font-size: 2.4rem;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  text-align: center;
+  align-self: center;
+  grid-area: Skills;
+}
+
+.skills h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-style: italic;
+}
+
+.skills img {
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  display: inline-block;
+  background-size: 7.5rem 7.5rem;
+  background-repeat: no-repeat;
+  transition: transform 500ms ease;
+}
+
+.skills img:hover {
+  transform: scale(2.0);
+}
+
+.projects {
+  width: 100%;
+  background-color: #fff;
+  grid-area: Projects;
+  padding: 5rem;
+  background: rgb(29, 30, 31);
+  grid-column: 1 / 4;
+}
+
+.projects h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 4.8rem;
+  margin-bottom: 5rem;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-container {
+  width: 100%;
+  padding: 2rem;
+  color: #333;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.project-container h3 {
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+.project-container a {
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+}
+
+.project-container a:visited {
+  color: inherit;
+}
+
+.project-container a:hover {
+  text-decoration: underline;
+}
+
+.link {
+  background: url('./images/link.svg');
+  background-size: 2.5rem 2.5rem;
+  background-repeat: no-repeat;
+  display: block;
+  margin-top: 1rem;
+  float: right;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 250ms ease-in-out;
+}
+
+.link:hover {
+  transform: scale(1.5);
+}
+
+.project-container p {
+  line-height: 1.5;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: lighter;
+}
+
+.technologies {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.technologies ul {
+  display: flex;
+}
+
+.technologies ul li {
+  list-style: none;
+  background: rgb(29, 30, 31);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+
+@media (max-width: 480px) {
+  :root, html {
+    font-size: 7px;
+  }
+
+  .landing {
+    height: auto;
+  }
+
+  .landing h1 {
+    font-size: 15rem;
+  }
+
+  .about {
+    background: rgb(29, 30, 31);
+    color: #fff;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+  :root, html {
+    font-size: 8px;
+  }
+
+  .landing {
+    height: auto;
+  }
+
+  .landing h1 {
+    font-size: 20rem;
+  }
+
+  .about {
+    background: rgb(29, 30, 31);
+    color: #fff;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "Landing"
+      "About"
+      "Skills"
+      "Projects"
+      "Contact";
+  }
+}
