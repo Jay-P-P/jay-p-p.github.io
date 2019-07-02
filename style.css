@@ -213,6 +213,7 @@
   background-size: 2.5rem 2.5rem;
   background-repeat: no-repeat;
   margin-top: 1rem;
+  margin-left: 0.5rem;
   max-width: 2.5rem;
   max-height: 2.5rem;
   transition: transform 250ms ease-in-out;
