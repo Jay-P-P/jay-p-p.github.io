@@ -82,7 +82,7 @@
 
 .landing {
   height: 100vh;
-  max-width: 50%;
+  width: 100%;
   grid-area: Landing;
 }
 
