@@ -116,6 +116,9 @@
   margin-bottom: 2.5rem;
   text-align: center;
   font-size: 3.6rem;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .about p {
@@ -187,6 +190,7 @@
 
 .project-container {
   padding: 2rem;
+  width: 100%;
   color: #333;
   border-radius: 20px;
   background-color: #fff;
@@ -226,7 +230,20 @@
   line-height: 1.5;
   font-size: 2rem;
   margin-top: 2rem;
-  font-weight: lighter;
+}
+
+.project-container > ul {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.project-container > ul li {
+  list-style: none;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid rgb(240, 150, 255);
 }
 
 .technologies {
