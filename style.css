@@ -176,16 +176,16 @@
 
 .projects-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, min-content));
   width: 100%;
   justify-content: center;
   align-content: center;
+  justify-items: center;
   grid-gap: 10px;
   flex-wrap: wrap;
 }
 
 .project-container {
-  width: 100%;
   padding: 2rem;
   color: #333;
   border-radius: 20px;
