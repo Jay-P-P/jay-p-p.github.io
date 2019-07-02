@@ -250,8 +250,6 @@
 .contact {
   grid-area: Contact;
   width: 100%;
-  height: 50vh;
-  background: red;
 }
 
 @media (max-width: 480px) {
