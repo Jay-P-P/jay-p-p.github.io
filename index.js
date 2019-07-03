@@ -28,4 +28,19 @@ window.onload = function(event) {
       });
     });
   });
+
+  var skills = document.querySelector('.skills');
+  var skillsHeading = skills.children[0];
+  var skillsChildren = [...skills.children[1].children];
+  var colors = ['orange', 'blue', 'gold', 'lightblue', 'green'];
+
+  skillsChildren.map(function(skill, index) {
+    skill.addEventListener('mouseover', function() {
+      skillsHeading.style.color = `${colors[index]}`;
+    });
+
+    // skill.addEventListener('mouseleave', function() {
+    //   skillsHeading.style.color = 'inherit';
+    // });
+  });
 };
