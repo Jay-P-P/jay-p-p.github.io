@@ -30,8 +30,10 @@
   top: 0;
   min-height: 100%;
   min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   overflow: hidden;
-  text-align: right;
   padding: 10rem 2rem;
   background-color: rgba(29, 30, 31, 0.9);
   z-index: 2;
@@ -44,16 +46,29 @@
   font-size: 5rem;
   display: block;
   margin: 0 1rem;
+  position: relative;
   transition: all 500ms ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right;
+  width: 100%;
+  z-index: 4;
+  border-bottom: 2px solid rgb(240, 150, 255);
+  transition: transform 350ms ease;
 }
 
 .navbar a:visited, .navbar a:active {
   color: #fff;
 }
 
-.navbar a:hover {
-  color: rgb(240, 150, 255);
-  text-decoration: underline;
+.navbar a:hover::after {
+  transform: scale(1);
 }
 
 .navbar-toggle {
