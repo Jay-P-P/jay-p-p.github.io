@@ -7,6 +7,24 @@
 
 :root, html {
   font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right;
+  width: 100%;
+  z-index: 4;
+  border-bottom: 2px solid rgb(240, 150, 255);
+  transition: transform 350ms ease;
+}
+
+a:hover::after {
+  transform: scale(1);
 }
 
 .container {
@@ -50,26 +68,11 @@
   transition: all 500ms ease;
 }
 
-.navbar a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: scale(0, 1);
-  transform-origin: right;
-  width: 100%;
-  z-index: 4;
-  border-bottom: 2px solid rgb(240, 150, 255);
-  transition: transform 350ms ease;
-}
 
 .navbar a:visited, .navbar a:active {
   color: #fff;
 }
 
-.navbar a:hover::after {
-  transform: scale(1);
-}
 
 .navbar-toggle {
   font-size: 2.5rem;
@@ -237,23 +240,19 @@
   text-align: center;
 }
 
-.project-container a {
+.project-container h3 a {
   text-decoration: none;
+  position: relative;
 }
 
-.project-container a:visited {
+.project-container h3 a:visited {
   color: inherit;
-}
-
-.project-container a:hover {
-  text-decoration: underline;
 }
 
 .link {
   margin-left: 0.5rem;
   width: 2.5rem;
   height: 2.5rem;
-  transition: transform 250ms ease-in-out;
 }
 
 .link-container {
