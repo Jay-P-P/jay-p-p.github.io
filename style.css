@@ -290,7 +290,7 @@ a:hover::after {
   background: rgb(29, 30, 31);
   grid-column: 1 / 4;
   transition: all 1000ms ease-in-out;
-  transform: translateY(100vh);
+  transform: translateY(101vh);
 }
 
 .projects h2 {
@@ -398,25 +398,36 @@ a:hover::after {
 .contact {
   grid-area: Contact;
   width: 100%;
-  padding: 2rem;
+  padding: 5rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 
-.contact p {
-  font-size: 2.4rem;
-  margin: 0 auto;
+.contact div {
+  padding: 1.2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgb(220, 220, 220);
+  margin: 0 1rem;
+  transition: all 500ms ease;
 }
 
-.contact p img {
-  color: rgb(240, 150, 255);
-  width: 3rem;
-  height: 3rem;
-  display: inline-block;
-  margin-right: 1rem;
-  vertical-align: bottom;
+.contact img {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+.contact div:hover {
+  transform: scale(1.2);
+  background-color: rgb(240, 150, 255);
+}
+
+.contact a::after {
+  content: none;
 }
 
 
