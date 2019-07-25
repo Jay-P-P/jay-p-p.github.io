@@ -1,6 +1,8 @@
 window.onload = function(event) {
   var landing = document.querySelector('.landing');
-  var [landingFirstName, landingLastName, landingTitle] = landing.children;
+  var [landingFirstName, landingLastName, landingTitle] = Array.from(
+    landing.children
+  );
   var about = document.querySelector('.about');
   var face = document.querySelector('.face');
   var education = document.querySelector('.education');
@@ -31,8 +33,8 @@ window.onload = function(event) {
   };
   navbarButton.addEventListener('click', toggleNavBar);
 
-  const sections = {};
-  var links = [...menu.children];
+  var sections = {};
+  var links = Array.from(menu.children);
   links.map(function(link) {
     var sectionName = link.textContent.toLowerCase().replace(' ', '_');
     sections[sectionName] = document.querySelector(`#${sectionName}`);
@@ -47,8 +49,8 @@ window.onload = function(event) {
   });
 
   var skills = document.querySelector('.skills');
-  var skillsHeading = skills.children[0];
-  var skillsChildren = [...skills.children[1].children];
+  var skillsHeading = Array.from(skills.children)[0];
+  var skillsChildren = Array.from(Array.from(skills.children)[1].children);
   var colors = ['orange', 'blue', 'gold', 'lightblue', 'green'];
 
   skillsChildren.map(function(skill, index) {
@@ -85,9 +87,9 @@ window.onload = function(event) {
 
   function showProjects() {
     projects.style = 'transform: translateY(0);';
-    var projectsChildren = [
-      ...projects.getElementsByClassName('project-container')
-    ];
+    var projectsChildren = Array.from(
+      projects.getElementsByClassName('project-container')
+    );
 
     var timeout = 1000;
     projectsChildren.forEach(function(project) {
