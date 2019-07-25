@@ -40,11 +40,6 @@ window.onload = function(event) {
     sections[sectionName] = document.querySelector(`#${sectionName}`);
     link.addEventListener('click', function() {
       toggleNavBar();
-      sections[sectionName].scroll({
-        top: sections[sectionName].offsetTop,
-        left: 0,
-        behavior: 'smooth'
-      });
     });
   });
 
