@@ -97,25 +97,21 @@ window.onload = function(event) {
 
   var breakPoints = {
     aboutAndFace: {
-      // Section: aboutAndFace
       breakPointTrigger: landing.clientHeight / 2,
       triggerFunction: showAboutAndFace,
       shown: false
     },
     education: {
-      // Section: education
       breakPointTrigger: landing.clientHeight + about.clientHeight / 2,
       triggerFunction: showEducation,
       shown: false
     },
     skills: {
-      // Section: skills
       breakPointTrigger: landing.clientHeight + about.clientHeight,
       triggerFunction: showSkills,
       shown: false
     },
     projects: {
-      // Section: projects
       breakPointTrigger:
         landing.clientHeight + about.clientHeight + skills.clientHeight,
       triggerFunction: showProjects,
@@ -130,38 +126,20 @@ window.onload = function(event) {
   function checkForAnimationBreakpoints() {
     position = window.scrollY;
 
-    if (
-      !breakPoints['aboutAndFace'].shown &&
-      position >= breakPoints['aboutAndFace'].breakPointTrigger
-    ) {
-      breakPoints['aboutAndFace'].shown = true;
-      breakPoints['aboutAndFace'].triggerFunction();
-    }
+    breakPointNames.map(function(point, index) {
+      if (
+        !breakPoints[point].shown &&
+        position >= breakPoints[point].breakPointTrigger
+      ) {
+        breakPoints[point].shown = true;
+        breakPointNames.splice(index, 1);
+        breakPoints[point].triggerFunction();
 
-    if (
-      !breakPoints['education'].shown &&
-      position >= breakPoints['education'].breakPointTrigger
-    ) {
-      breakPoints['education'].shown = true;
-      breakPoints['education'].triggerFunction();
-    }
-
-    if (
-      !breakPoints['skills'].shown &&
-      position >= breakPoints['skills'].breakPointTrigger
-    ) {
-      breakPoints['skills'].shown = true;
-      breakPoints['skills'].triggerFunction();
-    }
-
-    if (
-      !breakPoints['projects'].shown &&
-      position >= breakPoints['projects'].breakPointTrigger
-    ) {
-      breakPoints['projects'].shown = true;
-      breakPoints['projects'].triggerFunction();
-      window.removeEventListener('scroll', checkForAnimationBreakpoints);
-    }
+        if (breakPoints['projects'].shown) {
+          window.removeEventListener('scroll', checkForAnimationBreakpoints);
+        }
+      }
+    });
   }
 
   window.addEventListener('scroll', checkForAnimationBreakpoints);

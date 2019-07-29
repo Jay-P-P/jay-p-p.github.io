@@ -291,41 +291,38 @@ a:hover::after {
 .projects {
   width: 100%;
   min-height: 100vh;
-  background-color: #fff;
   grid-area: Projects;
   padding: 5rem;
-  background: rgb(29, 30, 31);
   transition: all 1000ms ease-in-out;
   transform: translateY(101vh);
 }
 
 .projects h2 {
-  color: #fff;
+  color: #333;
   text-align: center;
   font-size: 4.8rem;
   margin-bottom: 5rem;
 }
 
 .projects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, min-content));
+  display: flex;
   width: 100%;
   justify-content: center;
   align-content: center;
   justify-items: center;
-  grid-gap: 10px;
   flex-wrap: wrap;
 }
 
 .project-container {
   padding: 2rem;
-  width: 100%;
-  color: #333;
+  min-width: 50%;
+  max-height: 100%;
+  margin: 1rem;
+  color: white;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #03244d;
   opacity: 0;
-  transform: scale(1.1);
-  transition: all 250ms ease;
+  transition: all 500ms ease;
 }
 
 .project-container h3 {
@@ -374,14 +371,21 @@ a:hover::after {
 
 .project-container > ul li {
   list-style: none;
-  padding-left: 2rem;
+  padding-left: 1rem;
   margin-bottom: 0.5rem;
-  border-left: 5px solid rgb(240, 150, 255);
+  border-left: 5px solid white;
 }
 
 .project-container video {
   margin-top: 2rem;
+  max-height: 0;
   width: 100%;
+  overflow: hidden;
+  transition: all 500ms ease-in-out;
+}
+
+.project-container:hover video {
+  max-height: 500px;
 }
 
 .technologies {
