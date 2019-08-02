@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <title>Jay Patel | Web Developer</title>
-    <link rel='stylesheet' href='./style.css' type='text/css'>
+    <link rel='stylesheet' href='./index.css' type='text/css'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans+HK:700&display=swap' rel='stylesheet'>
   </head>
   <body>
     <main class='container'>
-
       <span class='navbar-toggle navbar-rotate'>|||</span>
       <nav class='navbar navbar-hide'>
         <a href='#about_me'>About Me</a>
-        <a href='#skills'>Skills</a>
         <a href='#education'>Education</a>
+        <a href='#skills'>Skills</a>
         <a href='#projects'>Projects</a>
       </nav>
 
@@ -21,6 +20,7 @@
         <h1>Jay</h1>
         <h1>Patel</h1>
         <h3>Web Developer</h3>
+        <a class="scroll-arrow" href="#about_me">&or;</a>
       </section>
       
       <section class='face'>
@@ -35,8 +35,7 @@
         </p>
       </section>
       
-      <section class='education'>
-        <h2 id='education'>Education</h2>
+      <section id="education" class='education'>
         <div class='logo'>
           <a href='https://www.auburn.edu' target='_blank' rel="noopener noreferrer"><img class='au-logo' src='./images/auburn_university.svg' alt='Auburn University Logo' /></a>
         </div>
@@ -57,7 +56,7 @@
       <section id='projects' class='projects'>
         <h2>Projects</h2>
         <section class='projects-list'>
-          <div class='project-container'>
+          <div class='project-container jwitter'>
             <h3><a href='https://jwitterapp.herokuapp.com' target='_blank' rel="noopener noreferrer">Jwitter</a></h3>
             <p>Jwitter is a simple twitter-like social media website.</p> 
             <p>Features the ability to follow, like, and rejweet users as well as the ability to post your own jweets.</p>
@@ -73,6 +72,8 @@
                 <li>React</li>
                 <li>Node</li>
                 <li>MongoDB</li>
+                <li>HTML</li>
+                <li>CSS</li>
               </ul>
             </div>
             <div class='link-container'>
@@ -85,7 +86,7 @@
             </div>
           </div>
           
-          <div class='project-container'>
+          <div class='project-container aqua'>
             <h3><a href='https://keen-easley-667de2.netlify.com' target='_blank' rel="noopener noreferrer">Aqua</a></h3>
             <p>Aqua is a simple website to find aquariums hosting live webcams of their exhibits.</p>
             <div class='technologies'>
@@ -108,9 +109,10 @@
             </video>
           </div>
 
-          <div class='project-container'>
+          <div class='project-container bakery'>
             <h3><a href='https://jay-p-p.github.io/bakery' target='_blank' rel="noopener noreferrer">Jay's Bakery</a></h3>
             <p>A fictional store page for Jay's Bakery.</p>
+            <p>Learned CSS Grid in order to implement a fun visual design typically difficult to implement using traditional CSS.</p>
             <p>Project Implementation Details</p>
             <ul>
               <li>CSS Grid</li>
@@ -130,10 +132,9 @@
                 <img class='link' src='./images/github.svg' alt='Github logo'>
               </a>
             </div>
-            <!-- TODO: Add video for bakery website -->
-            <!-- <video src='./images/aqua.mp4' loop muted autoplay>
+            <video src='./images/bakery.mp4' loop muted autoplay>
               Your browser does not support HTML5!
-            </video> -->
+            </video>
           </div>
         </section>
       </section>
@@ -141,9 +142,9 @@
       <section id='contact' class='contact'>
         <div>
           <a href="mailto:jayptl.business@gmail.com" target="_blank" rel="noopener noreferrer">
-              <img src='./images/email.svg' alt='email icon' />
-            </a>
-          </div>
+            <img src='./images/email.svg' alt='email icon' />
+          </a>
+        </div>
         <div>
           <a href="https://github.com/Jay-P-P" target="_blank" rel="noopener noreferrer">
             <img src='./images/github.svg' alt='github logo' />
