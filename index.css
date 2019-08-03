@@ -166,9 +166,8 @@ a {
 
 .face {
   grid-area: 2 / 5 / 3 / 7;
-  width: auto;
   text-align: center;
-  height: 100%;
+  height: auto;
 }
 
 .education {
@@ -250,7 +249,6 @@ a {
 .projects h3 a {
   color: black;
   font-size: 2.6rem;
-  padding: 0.5rem;
 }
 
 .projects h3 a:visited {
