@@ -28,7 +28,9 @@ window.onload = function(event) {
 
   var skills = document.querySelector('.skills');
   var skillsHeading = Array.from(skills.children)[0];
-  var skillsChildren = Array.from(Array.from(skills.children)[1].children);
+  var skillsChildren = Array.from(
+    Array.from(Array.from(skills.children)[1].children)[0].children
+  );
   var colors = ['orange', 'blue', 'gold', 'lightblue', 'green'];
 
   skillsChildren.map(function(skill, index) {
@@ -37,7 +39,7 @@ window.onload = function(event) {
     });
 
     skill.addEventListener('mouseleave', function() {
-      skillsHeading.style.color = 'inherit';
+      skillsHeading.style.color = 'black';
     });
   });
 };
