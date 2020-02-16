@@ -6,11 +6,13 @@ window.onload = function(event) {
       menu.classList.toggle('navbar-show');
       menu.classList.toggle('navbar-hide');
       navbarButton.style.transform = 'rotate(0)';
+      navbarButton.style.color = 'white';
       navbarButton.innerHTML = '&times;';
     } else {
       menu.classList.toggle('navbar-show');
       menu.classList.toggle('navbar-hide');
       navbarButton.style.transform = 'rotate(90deg)';
+      navbarButton.style.color = 'black';
       navbarButton.textContent = '|||';
     }
   };
