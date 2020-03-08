@@ -4,13 +4,11 @@ window.onload = function(event) {
   var toggleNavBar = function() {
     if (!menu.classList.contains('navbar-show')) {
       menu.classList.toggle('navbar-show');
-      menu.classList.toggle('navbar-hide');
       navbarButton.style.transform = 'rotate(0)';
       navbarButton.style.color = 'white';
       navbarButton.innerHTML = '&times;';
     } else {
       menu.classList.toggle('navbar-show');
-      menu.classList.toggle('navbar-hide');
       navbarButton.style.transform = 'rotate(90deg)';
       navbarButton.style.color = 'black';
       navbarButton.textContent = '|||';
@@ -28,20 +26,23 @@ window.onload = function(event) {
     });
   });
 
-  var skills = document.querySelector('.skills');
-  var skillsHeading = Array.from(skills.children)[0];
+  var skillsHeading = document.querySelectorAll('.subheading');
   var skillsChildren = Array.from(
-    Array.from(Array.from(skills.children)[1].children)[0].children
+    document.querySelectorAll('.skills .content-container img')
   );
   var colors = ['orange', 'blue', 'gold', 'lightblue', 'green'];
 
   skillsChildren.map(function(skill, index) {
     skill.addEventListener('mouseover', function() {
-      skillsHeading.style.color = `${colors[index]}`;
+      skillsHeading.forEach(function(el) {
+        el.style.backgroundColor = `${colors[index]}`;
+      });
     });
 
     skill.addEventListener('mouseleave', function() {
-      skillsHeading.style.color = 'black';
+      skillsHeading.forEach(function(el) {
+        el.style.backgroundColor = 'var(--subheading-background-color)';
+      });
     });
   });
 };

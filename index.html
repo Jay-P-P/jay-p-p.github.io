@@ -16,31 +16,36 @@
     </script>
   </head>
   <body>
+    <span class='navbar-toggle navbar-rotate'>|||</span>
+    <nav class='navbar'>
+      <a href='#about_me'>About Me</a>
+      <a href='#education'>Education</a>
+      <a href='#skills'>Skills</a>
+      <a href='#projects'>Projects</a>
+      <a href='#contact'>Contact Me</a>
+    </nav>
     <main class='container'>
-      <span class='navbar-toggle navbar-rotate'>|||</span>
-      <nav class='navbar navbar-hide'>
-        <a href='#about_me'>About Me</a>
-        <a href='#education'>Education</a>
-        <a href='#skills'>Skills</a>
-        <a href='#projects'>Projects</a>
-      </nav>
 
       <section class='landing'>
-        <h1>Jay</h1>
-        <h1>Patel</h1>
-        <div class="gradient-border">
-          <h3>Web Developer</h3>
+        <div class="subheading-container">
+          <h2 class="subheading">Web Developer</h2>
         </div>
-        <a class="scroll-arrow" href="#about_me">&or;</a>
+        <div class="content-container">
+          <h1>Jay</h1>
+          <h1>Patel</h1>
+        </div>
+        <a class="scroll-arrow" href="#about_me">^</a>
       </section>
       
       <section class='face'>
-        <img class='face' src='./images/face.png' alt='Picture of Jay Patel' />
+        <img src='./images/face.png' alt='Picture of Jay Patel' />
       </section>
       
       <section id='about_me' class='about'>
-        <h2>About Me</h2>
-        <div class="gradient-border">
+        <div class="subheading-container">
+          <h2 class="subheading">About Me</h2>
+        </div>
+        <div class="content-container">
           <p>
             <span class="greeting">Hello!</span> My name is Jay. I am an aspiring web developer with a dream to build beautiful functional websites.
             I am primarily experienced in React and Node.
@@ -49,33 +54,39 @@
       </section>
       
       <section id="education" class='education'>
-        <div class='logo'>
-          <a href='https://www.auburn.edu' target='_blank' rel="noopener noreferrer"><img class='au-logo' src='./images/auburn_university.svg' alt='Auburn University Logo' /></a>
+        <div class="subheading-container">
+          <h2 class="subheading">Education</h2>
         </div>
-        <p>Bachelor of Software Engineering</p>
+        <div class='logo content-container'>
+          <a class="university" href='https://www.auburn.edu' target='_blank' rel="noopener noreferrer"><img class='au-logo' src='./images/auburn_university.svg' alt='Auburn University Logo' /></a>
+          <p>Bachelor of Software Engineering</p>
+        </div>
       </section>
 
       <section id='skills' class='skills'>
-        <h2>Skills</h2>
-        <div class="gradient-border">
-          <div>
-            <img id='html5' src='./images/html5.svg' alt='HTML5 logo' />
-            <img id='css' src='./images/css3.svg' alt='CSS3 logo' />
-            <img id='js' src='./images/javascript.svg' alt='JavaScript logo' />
-            <img id='react' src='./images/react.svg' alt='Reactjs logo' />
-            <img id='node' src='./images/nodejs.svg' alt='Nodejs logo' />
-          </div>
+        <div class="subheading-container">
+          <h2 class="subheading">Skills</h2>
+        </div>
+        <div class="content-container">
+          <img id='html5' src='./images/html5.svg' alt='HTML5 logo' />
+          <img id='css' src='./images/css3.svg' alt='CSS3 logo' />
+          <img id='js' src='./images/javascript.svg' alt='JavaScript logo' />
+          <img id='react' src='./images/react.svg' alt='Reactjs logo' />
+          <img id='node' src='./images/nodejs.svg' alt='Nodejs logo' />
         </div>
       </section>
       
       <section id='projects' class='projects'>
-        <h2>Projects</h2>
-          <div class="gradient-border">
-            <article class='project-container'>
-              <h3><a href='https://jwitterapp.herokuapp.com' target='_blank' rel="noopener noreferrer">Jwitter</a></h3>
-              <p>Jwitter is a simple twitter-like social media website.</p> 
-              <p>Features the ability to follow, like, and rejweet users as well as the ability to post your own jweets.</p>
-              <p>Project Implementation Details</p>
+        <div class="subheading-container">
+          <h2 class="subheading">Projects</h2>
+        </div>
+          <article class='project-container content-container'>
+            <h3><a href='https://jwitterapp.herokuapp.com' target='_blank' rel="noopener noreferrer">Jwitter</a></h3>
+            <video class="project-image" src="images/jwitter.mp4" muted loop controls alt="Jwitter landing page."></video>
+            <p>Jwitter is a simple twitter-like social media website.</p> 
+            <p>Features the ability to follow, like, and rejweet users as well as the ability to post your own jweets.</p>
+            <div class="details">
+              <h4>Project Implementation Details</h4>
               <ul>
                 <li>Avatar storage using Amazon S3 Bucket</li>
                 <li>React Hooks</li>
@@ -83,94 +94,101 @@
                 <li>Route handling using Express</li>
                 <li>Testing using Chai</li>
               </ul>
-              <div class='technologies'>
-                <ul>
-                  <li>React</li>
-                  <li>Node</li>
-                  <li>MongoDB</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                </ul>
-              </div>
-              <div class='link-container'>
-                <a href='https://jwitterapp.herokuapp.com' target='_blank' rel="noopener noreferrer">
-                  <img class='link' src='./images/link.svg' alt='Link logo' />
-                </a>
-                <a href='https://github.com/Jay-P-P/jwitter' target='_blank' rel="noopener noreferrer">
-                  <img class='link' src='./images/github.svg' alt='Github logo'>
-                </a>
-              </div>
-            </article>
-          </div>
+            </div>
+            <div class='technologies'>
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>MongoDB</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class='link-container'>
+              <a href='https://jwitterapp.herokuapp.com' target='_blank' rel="noopener noreferrer">
+                <img class='link' src='./images/link.svg' alt='Link logo' />
+              </a>
+              <a href='https://github.com/Jay-P-P/jwitter' target='_blank' rel="noopener noreferrer">
+                <img class='link' src='./images/github.svg' alt='Github logo'>
+              </a>
+            </div>
+          </article>
 
-          <div class="gradient-border">
-            <article class='project-container'>
-              <h3><a href='https://keen-easley-667de2.netlify.com' target='_blank' rel="noopener noreferrer">Aqua</a></h3>
-              <p>Aqua is a simple website to find aquariums hosting live webcams of their exhibits.</p>
-              <div class='technologies'>
-                <ul>
-                  <li>HTML5</li>
-                  <li>SASS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-              <div class='link-container'>
-                <a href='https://keen-easley-667de2.netlify.com' target='_blank' rel="noopener noreferrer">
-                  <img class='link' src='./images/link.svg' alt='Link logo' />
-                </a>
-                <a href='https://github.com/Jay-P-P/aqua' target='_blank' rel="noopener noreferrer">
-                  <img class='link' src='./images/github.svg' alt='Github logo'>
-                </a>
-              </div>
-            </article>
-          </div>
+          <article class='project-container content-container'>
+            <h3><a href='https://keen-easley-667de2.netlify.com' target='_blank' rel="noopener noreferrer">Aqua</a></h3>
+            <video class="project-image" src="images/aqua.mp4" muted loop controls alt="Aqua landing page."></video>
+            <p>Aqua is a simple website to find aquariums hosting live webcams of their exhibits.</p>
+            <div class='technologies'>
+              <ul>
+                <li>HTML5</li>
+                <li>SASS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <div class='link-container'>
+              <a href='https://keen-easley-667de2.netlify.com' target='_blank' rel="noopener noreferrer">
+                <img class='link' src='./images/link.svg' alt='Link logo' />
+              </a>
+              <a href='https://github.com/Jay-P-P/aqua' target='_blank' rel="noopener noreferrer">
+                <img class='link' src='./images/github.svg' alt='Github logo'>
+              </a>
+            </div>
+          </article>
 
-          <div class="gradient-border">
-            <article class='project-container'>
-              <h3><a href='https://jay-p-p.github.io/bakery' target='_blank' rel="noopener noreferrer">Jay's Bakery</a></h3>
-              <p>A fictional store page for Jay's Bakery.</p>
-              <p>Learned CSS Grid in order to implement a fun visual design typically difficult to implement using traditional CSS.</p>
-              <p>Project Implementation Details</p>
+          <article class='project-container content-container'>
+            <h3><a href='https://jay-p-p.github.io/bakery' target='_blank' rel="noopener noreferrer">Jay's Bakery</a></h3>
+            <video class="project-image" src="images/bakery.mp4" muted loop controls alt="Jay's Bakery landing page."></video>
+            <p>A fictional store page for Jay's Bakery.</p>
+            <p>Learned CSS Grid in order to implement a fun visual design typically difficult to implement using traditional CSS.</p>
+            <div class="details">
+              <h4>Project Implementation Details</h4>
               <ul>
                 <li>CSS Grid</li>
               </ul>
+            </div>
               <div class='technologies'>
                 <ul>
                   <li>HTML5</li>
                   <li>SASS</li>
                   <li>JavaScript</li>
                 </ul>
-              </div>
-              <div class='link-container'>
-                <a href='https://jay-p-p.github.io/bakery' target='_blank' rel="noopener noreferrer">
-                  <img class='link' src='./images/link.svg' alt='Link logo' />
-                </a>
-                <a href='https://github.com/Jay-P-P/bakery' target='_blank' rel="noopener noreferrer">
-                  <img class='link' src='./images/github.svg' alt='Github logo'>
-                </a>
-              </div>
-            </article>
-          </div>
+            </div>
+            <div class='link-container'>
+              <a href='https://jay-p-p.github.io/bakery' target='_blank' rel="noopener noreferrer">
+                <img class='link' src='./images/link.svg' alt='Link logo' />
+              </a>
+              <a href='https://github.com/Jay-P-P/bakery' target='_blank' rel="noopener noreferrer">
+                <img class='link' src='./images/github.svg' alt='Github logo'>
+              </a>
+            </div>
+          </article>
         </section>
       </section>
       
-      <section id='contact' class='contact'>
-        <div>
+    </main>
+
+    <footer id='contact' class='contact'>
+      <div class="subheading-container">
+        <h2 class="subheading">Contact Me</h2>
+      </div>
+      <div class="content-container">
+        <div class="contact-link">
           <a href="mailto:jayptl.business@gmail.com" target="_blank" rel="noopener noreferrer">
             <img src='./images/email.svg' alt='email icon' />
           </a>
         </div>
-        <div>
+        <div class="contact-link">
           <a href="https://github.com/Jay-P-P" target="_blank" rel="noopener noreferrer">
             <img src='./images/github.svg' alt='github logo' />
           </a>
         </div>
-        <div>
+        <div class="contact-link">
           <a href="https://www.linkedin.com/in/Jay-P-P" target="_blank" rel="noopener noreferrer">
             <img src='./images/linkedin.svg' alt='linkedin logo' />
           </a>
         </div>
-    </main>
+      </div>
+    </footer>
 
 
     <script src='index.js'></script>
